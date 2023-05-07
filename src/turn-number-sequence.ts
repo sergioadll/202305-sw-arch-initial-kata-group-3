@@ -1,4 +1,6 @@
-class TurnNumberSequence {
+import { ITurnNumberSequence } from './i-turn-number-sequence';
+
+class TurnNumberSequence implements ITurnNumberSequence {
   private turnNumber: number;
 
   constructor() {
