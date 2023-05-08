@@ -1,13 +1,13 @@
-import { TurnSequence } from './i-turn-sequence';
+import { TurnSequence } from './general-turn-sequence';
 
-class TurnNumberSequence implements TurnSequence {
+class TurnNumberSequence implements TurnSequence<number> {
   private turnNumber: number;
 
   constructor() {
     this.turnNumber = 0;
   }
 
-  public getNextTurnNumber() {
+  public getNextTurnValue() {
     return this.turnNumber++;
   }
 }

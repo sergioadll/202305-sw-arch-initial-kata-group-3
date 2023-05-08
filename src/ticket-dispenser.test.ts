@@ -1,18 +1,18 @@
-import TicketDispenser from './ticket-dispenser';
+import NumberTicketDispenser from './ticket-number-dispenser';
 import TurnNumberSequence from './turn-number-sequence';
-import TurnTicketNumberService from './turn-ticket.service';
+import TurnTicketNumberService from './turn-ticket-number.service';
 
-describe('TicketDispenser', () => {
-  let dispenser1: TicketDispenser;
-  let dispenser2: TicketDispenser;
+describe('NumberTicketDispenser', () => {
+  let dispenser1: NumberTicketDispenser;
+  let dispenser2: NumberTicketDispenser;
 
   beforeAll(() => {
     const sequence = TurnNumberSequence;
-    dispenser1 = new TicketDispenser({
+    dispenser1 = new NumberTicketDispenser({
       turnNumberSequence: sequence,
       turnTicketService: new TurnTicketNumberService(),
     });
-    dispenser2 = new TicketDispenser({
+    dispenser2 = new NumberTicketDispenser({
       turnNumberSequence: sequence,
       turnTicketService: new TurnTicketNumberService(),
     });
