@@ -1,6 +1,6 @@
 import NumberTicketDispenser from './ticket-number-dispenser';
-import TurnNumberSequence from './turn-number-sequence';
-import TurnTicketNumberService from './turn-ticket-number.service';
+import TurnNumberSequence from '../turn_sequence/turn-number-sequence';
+import TurnTicketNumberService from '../turn_ticket/turn-ticket-number.service';
 
 describe('NumberTicketDispenser', () => {
   let dispenser1: NumberTicketDispenser;

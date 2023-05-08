@@ -1,6 +1,6 @@
 import { GeneralTicketDispenser } from './general-ticket-dispenser';
-import { TurnSequence } from './general-turn-sequence';
-import { GeneralTurnTicketService } from './general-turn-ticket.service';
+import { TurnSequence } from '../turn_sequence/general-turn-sequence';
+import { GeneralTurnTicketService } from '../turn_ticket/general-turn-ticket.service';
 
 interface TicketDispenserDependencies {
   turnTicketService: GeneralTurnTicketService<number>;
