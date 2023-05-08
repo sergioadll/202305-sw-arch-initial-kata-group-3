@@ -1,12 +1,21 @@
 import TicketDispenser from './ticket-dispenser';
+import TurnNumberSequence from './turn-number-sequence';
+import TurnTicketNumberService from './turn-ticket.service';
 
 describe('TicketDispenser', () => {
   let dispenser1: TicketDispenser;
   let dispenser2: TicketDispenser;
 
   beforeAll(() => {
-    dispenser1 = new TicketDispenser();
-    dispenser2 = new TicketDispenser();
+    const sequence = TurnNumberSequence;
+    dispenser1 = new TicketDispenser({
+      turnNumberSequence: sequence,
+      turnTicketService: new TurnTicketNumberService(),
+    });
+    dispenser2 = new TicketDispenser({
+      turnNumberSequence: sequence,
+      turnTicketService: new TurnTicketNumberService(),
+    });
   });
 
   test('getTurnTicket should return 0 for the first call', () => {

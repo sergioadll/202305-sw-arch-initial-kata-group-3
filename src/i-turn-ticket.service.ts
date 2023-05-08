@@ -1,6 +1,6 @@
-import { ITurnTicket } from './i-turn-ticket';
+import { TurnTicket } from './i-turn-ticket';
 
-export interface ITurnTicketService {
+export interface TurnTicketService {
   // eslint-disable-next-line no-unused-vars
-  create: (turnNumber: number) => ITurnTicket;
+  create: (turnNumber: number) => TurnTicket;
 }

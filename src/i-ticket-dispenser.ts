@@ -1,5 +1,5 @@
-import { ITurnTicket } from './i-turn-ticket';
+import { TurnTicket } from './i-turn-ticket';
 
-export interface ITicketDispenser {
-  getTurnTicket: () => ITurnTicket;
+export interface TicketDispenser {
+  getTurnTicket: () => TurnTicket;
 }

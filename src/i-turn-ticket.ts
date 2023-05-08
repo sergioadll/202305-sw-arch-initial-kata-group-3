@@ -1,3 +1,3 @@
-export interface ITurnTicket {
+export interface TurnTicket {
   getTurnNumber(): number;
 }

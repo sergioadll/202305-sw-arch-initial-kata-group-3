@@ -1,9 +1,9 @@
-import { ITurnTicket } from './i-turn-ticket';
-import { ITurnTicketService } from './i-turn-ticket.service';
-import TurnTicket from './turn-ticket';
+import { TurnTicket } from './i-turn-ticket';
+import { TurnTicketService } from './i-turn-ticket.service';
+import TurnTicketNumber from './turn-ticket';
 
-export default class TurnTicketService implements ITurnTicketService {
-  create(turnNumber: number): ITurnTicket {
-    return new TurnTicket(turnNumber);
+export default class TurnTicketNumberService implements TurnTicketService {
+  create(turnNumber: number): TurnTicket {
+    return new TurnTicketNumber(turnNumber);
   }
 }

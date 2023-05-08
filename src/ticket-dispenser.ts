@@ -1,22 +1,18 @@
-import { ITicketDispenser } from './i-ticket-dispenser';
-import { ITurnNumberSequence } from './i-turn-number-sequence';
-import TurnNumberSequence from './turn-number-sequence';
-import { ITurnTicketService } from './i-turn-ticket.service';
-import TurnTicketService from './turn-ticket.service';
+import { TicketDispenser } from './i-ticket-dispenser';
+import { TurnSequence } from './i-turn-sequence';
+import { TurnTicketService } from './i-turn-ticket.service';
 
 interface TicketDispenserDependencies {
-  turnTicketService: ITurnTicketService;
-  turnNumberSequence: ITurnNumberSequence;
+  turnTicketService: TurnTicketService;
+  turnNumberSequence: TurnSequence;
 }
-export default class TicketDispenser implements ITicketDispenser {
-  private turnTicketService: ITurnTicketService;
-  private turnNumberSequence: ITurnNumberSequence;
+export default class NumberTicketDispenser implements TicketDispenser {
+  private turnTicketService: TurnTicketService;
+  private turnNumberSequence: TurnSequence;
 
-  constructor(dependencies?: TicketDispenserDependencies) {
-    this.turnNumberSequence =
-      dependencies?.turnNumberSequence || TurnNumberSequence;
-    this.turnTicketService =
-      dependencies?.turnTicketService || new TurnTicketService();
+  constructor(dependencies: TicketDispenserDependencies) {
+    this.turnNumberSequence = dependencies.turnNumberSequence;
+    this.turnTicketService = dependencies.turnTicketService;
   }
 
   public getTurnTicket() {

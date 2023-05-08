@@ -1,6 +1,6 @@
-import { ITurnTicket } from './i-turn-ticket';
+import { TurnTicket } from './i-turn-ticket';
 
-export default class TurnTicket implements ITurnTicket {
+export default class TurnTicketNumber implements TurnTicket {
   private turnNumber: number;
 
   constructor(turnNumber: number) {
