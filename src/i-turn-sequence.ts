@@ -1,3 +1,3 @@
 export interface TurnSequence {
-  getNextTurnNumber: () => number;
+  getNextTurnNumber(): number;
 }
